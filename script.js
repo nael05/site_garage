@@ -1,455 +1,127 @@
-// ===================================
-// NAVIGATION
-// ===================================
-const navbar = document.getElementById('navbar');
-const navToggle = document.getElementById('navToggle');
+// ===== DATA =====
+const reviews = [
+    { name:"BrunoLdA", initials:"BL", color:"#2563eb", stars:5, date:"il y a 3 semaines", visit:"Février 2026", text:"J'ai bien apprécié l'accueil téléphonique et sur place. M. Rachid a été sérieux et a respecté les engagements (prestations, prix, créneau). Le changement de l'embrayage a très bien été exécuté. Le prix est honnête et un peu plus bas que dans la concurrence." },
+    { name:"Malik Barbier", initials:"MB", color:"#7c3aed", stars:5, date:"il y a 1 mois", visit:"Janvier 2026", text:"Je suis arrivé sans rendez-vous avec un problème urgent : une hernie sur mon flexible de frein avant. L'équipe a pris en charge le tout et a changé le flexible en seulement 15 minutes. Vraiment efficace et rapide !", badge:"Local Guide" },
+    { name:"Cerette LUMERTINE", initials:"CL", color:"#059669", stars:5, date:"il y a 1 mois", visit:"Janvier 2026", text:"Un grand merci à Rachid et son équipe pour l'accueil irréprochable et le professionnalisme. J'ai vraiment apprécié qu'il me montre une vidéo des réparations effectuées sur ma voiture. Je recommande vivement !" },
+    { name:"Adou ELYAKOUTI", initials:"AE", color:"#d97706", stars:5, date:"il y a 2 mois", visit:"Décembre 2025", text:"Service irréprochable. Accueil chaleureux, explications claires et réparation effectuée avec soin. Le rapport qualité-prix est excellent et les délais ont été respectés. Un garage de confiance que je recommande fortement." },
+    { name:"Jean-Thomas", initials:"JT", color:"#dc2626", stars:5, date:"il y a 5 mois", visit:"Septembre 2025", text:"Un sens du service que l'on trouve de plus en plus rarement. Accueil chaleureux, respect du devis présenté, pas de surprise. Réactivité et prestation réalisée rapidement même avec commande de pièce." },
+    { name:"MrPropre 95", initials:"MP", color:"#0891b2", stars:5, date:"il y a 7 mois", visit:"Juillet 2025", text:"Un grand merci à Rachid et son équipe pour leur professionnalisme. Ils ont même pensé à nettoyer les taches sur la voiture et même sous le capot. Encore merci, je viendrais faire mes plaquettes bientôt. À recommander !" },
+    { name:"Samia B", initials:"SB", color:"#be185d", stars:5, date:"il y a 3 mois", visit:"Novembre 2025", text:"J'ai contacté le garage avant de m'y rendre. Le retour a été très clair et la personne au téléphone, agréable et professionnelle. Je suis passée dans la demi-heure et mon véhicule a été pris en charge immédiatement." },
+    { name:"Yassine Benazzouz", initials:"YB", color:"#16a34a", stars:5, date:"il y a 7 mois", visit:"Juillet 2025", text:"Accueil très chaleureux. Prestation réalisée sur mon Opel Astra ce matin. La qualité de la vidange se manifeste immédiatement dans la fluidité du moteur. Respect du prix annoncé, aucune surprise. Merci !", badge:"Local Guide" },
+    { name:"Lyse VOUMBO-YALO", initials:"LV", color:"#7c3aed", stars:5, date:"il y a 5 mois", visit:"Août 2025", text:"Très bon garage, surtout honnête. Un autre garagiste voulait me facturer un FAP à 800€. Ici ils ont d'abord vérifié et en fait il n'y avait pas besoin de le changer. Honnêteté et sérieux au rendez-vous !" },
+    { name:"Hicham Bazout", initials:"HB", color:"#2563eb", stars:5, date:"il y a 10 mois", visit:"Avril 2025", text:"J'ai effectué l'entretien de ma Mercedes A250 (2024) dans ce garage et suis extrêmement satisfait. L'équipe est professionnelle, accueillante et à l'écoute. Le travail a été fait rapidement et avec soin." },
+    { name:"Fluffy N'pact", initials:"FN", color:"#0369a1", stars:5, date:"il y a 3 mois", visit:"Septembre 2025", text:"J'ai amené mon Golf 4 pour un embrayage. Les mécaniciens ont déniché un problème supplémentaire et m'en ont informé pour ne pas retourner un véhicule à problème sur la route. Garage très honnête." },
+    { name:"fari ben", initials:"FB", color:"#b45309", stars:5, date:"il y a 6 mois", visit:"Août 2025", text:"Après avoir été chez plusieurs garagistes, c'est le seul qui a pu diagnostiquer précisément ma panne sur ma Mégane 3 : capteur de pression d'huile défectueux. Très professionnel, Rachid explique clairement." },
+    { name:"Said Uzdenov", initials:"SU", color:"#0891b2", stars:5, date:"il y a 3 mois", visit:"Novembre 2025", text:"Très bon accueil ! L'équipe est professionnelle et chaleureuse. La prise en charge de ma voiture a été très rapide et efficace. Je recommande vivement ce garage !" },
+    { name:"johnson delia", initials:"JD", color:"#059669", stars:5, date:"il y a 4 mois", visit:"Octobre 2025", text:"Je suis satisfaite de ce garage. Ils ont pu résoudre un problème que les autres n'ont pas pu faire sur ma Opel Corsa. De plus l'accueil est convivial et chaleureux. Un grand merci à Rachid pour son professionnalisme." },
+    { name:"Izaoura Cbr", initials:"IC", color:"#be185d", stars:5, date:"il y a un an", visit:"Janvier 2025", text:"Le patron est vraiment très professionnel et est très à l'écoute des besoins de ses clients. Je suis venue pour une réparation de mon embrayage sur ma 207. Réglé en moins de 24h, je vous le recommande vraiment !", badge:"Local Guide" },
+    { name:"Valentina Soares", initials:"VS", color:"#d97706", stars:5, date:"il y a 6 mois", visit:"Août 2025", text:"Révision, distribution, pneu, triangles. Tout a été traité dans un délai rapide et ils ont été très arrangeants sur le tarif. Clairement, ce sont des gens qui écoutent, expliquent et cherchent des solutions." },
+    { name:"Nawfal Hamdi", initials:"NH", color:"#16a34a", stars:5, date:"il y a 1 mois", visit:"Janvier 2026", text:"Très bon garage, j'ai effectué une vidange. Une deuxième fois, réparation de papillon, tout est nickel. Personnel accueillant et pro." },
+    { name:"Agathe J.", initials:"AJ", color:"#7c3aed", stars:5, date:"il y a 7 mois", visit:"Juillet 2025", text:"Je suis allée pour ma Peugeot 206 qui surchauffait depuis 1 an — un autre garage avait échoué à le résoudre. Ici, le problème a été identifié et réglé. Service exceptionnel, je recommande chaudement !", badge:"Local Guide" }
+];
+
+function makeCard(r) {
+    return `<div class="review-card">
+        <div class="review-header">
+            <div class="avatar" style="background:${r.color}">${r.initials}</div>
+            <div>
+                <div class="reviewer-name">${r.name}${r.badge ? ` <span style="font-size:0.62rem;background:#e8f0fe;color:#1a56db;padding:2px 6px;border-radius:4px;">${r.badge}</span>` : ''}</div>
+                <div class="reviewer-meta">${r.date}</div>
+                <div class="review-stars">${'⭐'.repeat(r.stars)}</div>
+            </div>
+        </div>
+        <p class="review-text">"${r.text}"</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:auto;">
+            <span class="review-date">Visité en ${r.visit}</span>
+            <span class="google-badge">🔍 Google</span>
+        </div>
+    </div>`;
+}
+
+// Split reviews into 2 groups, then duplicate for seamless loop
+const half = Math.ceil(reviews.length / 2);
+const row1 = reviews.slice(0, half);
+const row2 = reviews.slice(half);
+
+function buildTrack(el, data) {
+    // Duplicate 3× to ensure seamless infinite scroll
+    const html = [...data, ...data, ...data].map(makeCard).join('');
+    el.innerHTML = html;
+}
+
+buildTrack(document.getElementById('track1'), row1);
+buildTrack(document.getElementById('track2'), row2);
+
+// ===== HEADER HIDE ON SCROLL =====
+const header = document.getElementById('mainHeader');
+let lastY = 0;
+let ticking = false;
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            const y = window.scrollY;
+            if (y > lastY && y > 100) {
+                header.classList.add('hide');
+            } else {
+                header.classList.remove('hide');
+            }
+            lastY = y;
+            ticking = false;
+        });
+        ticking = true;
+    }
+}, { passive: true });
+
+// ===== BACK TO TOP =====
+const backBtn = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+        backBtn.classList.add('visible');
+    } else {
+        backBtn.classList.remove('visible');
+    }
+}, { passive: true });
+
+backBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== MOBILE MENU =====
+const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
-const navLinkElements = document.querySelectorAll('.nav-link');
 
-// ===================================
-// NAVIGATION INTELLIGENTE (HIDE/SHOW)
-// ===================================
-let lastScrollTop = 0;
-
-window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (scrollTop > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-
-    if (!navLinks.classList.contains('active')) {
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    menuBtn.textContent = navLinks.classList.contains('open') ? '✖' : '☰';
 });
 
-// Mobile menu toggle
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    
-    // Animate hamburger
-    const spans = navToggle.querySelectorAll('span');
-    if (navLinks.classList.contains('active')) {
-        spans[0].style.transform = 'rotate(45deg) translateY(10px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
-        document.body.style.overflow = 'hidden'; 
-    } else {
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-        document.body.style.overflow = ''; 
-    }
-});
-
-// Active nav link on scroll
-const sections = document.querySelectorAll('section[id]');
-
-function updateActiveLink() {
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinkElements.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
-    });
-}
-
-window.addEventListener('scroll', updateActiveLink);
-
-// Close mobile menu on link click
-navLinkElements.forEach(link => {
+navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        const spans = navToggle.querySelectorAll('span');
-        spans[0].style.transform = 'none';
-        spans[1].style.opacity = '1';
-        spans[2].style.transform = 'none';
-        document.body.style.overflow = '';
+        navLinks.classList.remove('open');
+        menuBtn.textContent = '☰';
     });
 });
 
-// ===================================
-// SCROLL TO TOP BUTTON
-// ===================================
-const scrollTopBtn = document.getElementById('scrollTop');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollTopBtn.classList.add('visible');
-    } else {
-        scrollTopBtn.classList.remove('visible');
+// ===== HIGHLIGHT TODAY =====
+const todayNum = new Date().getDay();
+document.querySelectorAll('[data-day]').forEach(row => {
+    if (parseInt(row.dataset.day) === todayNum) {
+        row.classList.add('today');
+        const daySpan = row.querySelector('.hours-day');
+        if (daySpan) daySpan.innerHTML += '<span class="today-badge">Aujourd\'hui</span>';
     }
 });
 
-scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
+// ===== FORM =====
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    this.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+    setTimeout(() => {
+        this.reset();
+        this.style.display = 'block';
+        document.getElementById('formSuccess').style.display = 'none';
+    }, 5000);
 });
-
-// ===================================
-// ANIMATED COUNTERS
-// ===================================
-const statNumbers = document.querySelectorAll('.stat-number');
-let hasAnimated = false;
-
-function animateCounters() {
-    if (hasAnimated) return;
-    
-    const statsSection = document.querySelector('.hero-stats');
-    if (!statsSection) return;
-    
-    const rect = statsSection.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-    
-    if (rect.top <= windowHeight * 0.8 && rect.bottom >= 0) {
-        hasAnimated = true;
-        
-        statNumbers.forEach(stat => {
-            const target = parseInt(stat.getAttribute('data-target'));
-            const duration = 2000; 
-            const increment = target / (duration / 16); 
-            let current = 0;
-            
-            const updateCounter = () => {
-                current += increment;
-                if (current < target) {
-                    stat.textContent = Math.floor(current);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    stat.textContent = target;
-                }
-            };
-            
-            updateCounter();
-        });
-    }
-}
-
-window.addEventListener('scroll', animateCounters);
-window.addEventListener('load', animateCounters);
-
-// ===================================
-// ANIMATE ON SCROLL (AOS)
-// ===================================
-function initAOS() {
-    const elements = document.querySelectorAll('[data-aos]');
-    
-    if (elements.length === 0) return;
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const delay = parseInt(entry.target.getAttribute('data-aos-delay')) || 0;
-                setTimeout(() => {
-                    entry.target.classList.add('aos-animate');
-                }, delay);
-                observer.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px'
-    });
-    
-    elements.forEach(element => {
-        observer.observe(element);
-    });
-}
-
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAOS);
-} else {
-    initAOS();
-}
-
-// ===================================
-// COMPARISON SLIDER
-// ===================================
-const sliders = document.querySelectorAll('.comparison-slider');
-
-sliders.forEach(slider => {
-    const beforeImage = slider.querySelector('.c-before');
-    const handle = slider.querySelector('.c-handle');
-    let isDown = false;
-
-    const move = (e) => {
-        if (!isDown) return;
-        
-        const rect = slider.getBoundingClientRect();
-        const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-        const x = clientX - rect.left;
-        
-        let position = Math.max(0, Math.min(x, rect.width));
-        let percentage = (position / rect.width) * 100;
-
-        beforeImage.style.width = `${percentage}%`;
-        handle.style.left = `${percentage}%`;
-    };
-
-    slider.addEventListener('mousedown', (e) => {
-        isDown = true;
-        move(e);
-    });
-    
-    window.addEventListener('mouseup', () => { isDown = false; });
-    window.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        move(e);
-        e.preventDefault(); 
-    });
-
-    slider.addEventListener('touchstart', (e) => {
-        isDown = true;
-        move(e);
-    }, { passive: true });
-
-    window.addEventListener('touchend', () => { isDown = false; });
-    window.addEventListener('touchmove', (e) => {
-        if (!isDown) return;
-        move(e);
-    }, { passive: false });
-});
-
-// ===================================
-// SMOOTH SCROLL
-// ===================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        
-        if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-        }
-    });
-});
-
-// ===================================
-// PARALLAX EFFECT FOR GRADIENT SPHERES
-// ===================================
-const spheres = document.querySelectorAll('.gradient-sphere');
-
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    spheres.forEach((sphere, index) => {
-        const speed = 0.1 + (index * 0.05);
-        const yPos = -(scrolled * speed);
-        sphere.style.transform = `translateY(${yPos}px)`;
-    });
-});
-
-// ===================================
-// CURSOR EFFECT (Optional - Desktop only)
-// ===================================
-if (window.innerWidth > 768) {
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    cursor.style.cssText = `
-        position: fixed; width: 20px; height: 20px;
-        border: 2px solid var(--primary); border-radius: 50%;
-        pointer-events: none; z-index: 9999;
-        transition: transform 0.2s ease, opacity 0.2s ease;
-        opacity: 0;
-    `;
-    document.body.appendChild(cursor);
-    
-    const cursorDot = document.createElement('div');
-    cursorDot.style.cssText = `
-        position: fixed; width: 6px; height: 6px;
-        background: var(--primary); border-radius: 50%;
-        pointer-events: none; z-index: 10000;
-        transition: transform 0.1s ease; opacity: 0;
-    `;
-    document.body.appendChild(cursorDot);
-    
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    let dotX = 0, dotY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX; mouseY = e.clientY;
-        cursor.style.opacity = '1'; cursorDot.style.opacity = '1';
-    });
-    
-    document.addEventListener('mouseleave', () => {
-        cursor.style.opacity = '0'; cursorDot.style.opacity = '0';
-    });
-    
-    const interactiveElements = document.querySelectorAll('a, button, input, select, textarea');
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.style.transform = 'scale(1.5)';
-            cursor.style.borderColor = 'var(--primary-light)';
-        });
-        
-        el.addEventListener('mouseleave', () => {
-            cursor.style.transform = 'scale(1)';
-            cursor.style.borderColor = 'var(--primary)';
-        });
-    });
-    
-    function animateCursor() {
-        cursorX += (mouseX - cursorX) * 0.2;
-        cursorY += (mouseY - cursorY) * 0.2;
-        cursor.style.left = cursorX + 'px';
-        cursor.style.top = cursorY + 'px';
-        
-        dotX += (mouseX - dotX) * 0.4;
-        dotY += (mouseY - dotY) * 0.4;
-        cursorDot.style.left = dotX + 'px';
-        cursorDot.style.top = dotY + 'px';
-        
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-}
-
-// ===================================
-// PERFORMANCE OPTIMIZATION
-// ===================================
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if(img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.classList.add('loaded');
-                    imageObserver.unobserve(img);
-                }
-            }
-        });
-    });
-    
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-    });
-}
-
-function toggleCardSupp(button) {
-    const content = button.nextElementSibling;
-    content.classList.toggle('active');
-    const icon = button.querySelector('i');
-    if (icon) {
-        icon.style.transform = content.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-    }
-}
-
-// ===================================
-// LOGIQUE DU SLIDER DES PRESTATIONS (SCROLL SNAP)
-// ===================================
-let currentCategory = 'auto';
-
-function filterCategory(category) {
-    currentCategory = category;
-    
-    // 1. Mise à jour du style des boutons (Automobile / Mobilier)
-    document.querySelectorAll('.cat-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if(btn.innerText.toLowerCase().includes(category === 'auto' ? 'auto' : 'mobilier')) {
-            btn.classList.add('active');
-        }
-    });
-
-    // 2. Afficher toutes les cartes de la bonne catégorie, cacher les autres
-    const container = document.getElementById('mainSlider');
-    document.querySelectorAll('.service-card-single').forEach(card => {
-        if (card.getAttribute('data-type') === category) {
-            card.classList.add('show');
-        } else {
-            card.classList.remove('show');
-        }
-    });
-
-    // 3. Remettre le scroll tout à gauche automatiquement quand on change de catégorie
-    if(container) {
-        setTimeout(() => {
-            container.scrollTo({ left: 0, behavior: 'smooth' });
-        }, 50);
-    }
-}
-
-// Fonction pour les flèches sur Ordinateur
-function moveSlider(direction) {
-    const container = document.getElementById('mainSlider');
-    if (!container) return;
-    
-    const activeCard = container.querySelector('.service-card-single.show');
-    if (!activeCard) return;
-
-    // Calcule la largeur d'une carte + le gap (20px) pour savoir de combien de pixels glisser
-    const cardWidth = activeCard.offsetWidth;
-    const gap = 20; 
-    
-    container.scrollBy({
-        left: direction * (cardWidth + gap),
-        behavior: 'smooth'
-    });
-}
-
-// ===================================
-// INITIALIZE ON LOAD
-// ===================================
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.style.opacity = '0';
-        setTimeout(() => { preloader.style.display = 'none'; }, 300);
-    }
-    
-    updateActiveLink();
-    animateCounters();
-    
-    // Initialisation du slider sur la bonne catégorie au chargement
-    if(document.getElementById('mainSlider')) {
-        filterCategory('auto');
-    }
-});
-
-console.log('%c Clean Wash & Co ', 'background: linear-gradient(135deg, #00f0ff, #00b8cc); color: #050814; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 5px;');
-console.log('%c Site mis à jour avec le slider mobile 🚀 ', 'color: #00f0ff; font-size: 14px;');
-
-// ===================================
-// TARIFS INDEX (TOGGLE AUTO / DOMICILE)
-// ===================================
-function togglePricing(type) {
-    // Mettre à jour les boutons (Actif / Inactif)
-    const tabs = document.querySelectorAll('.p-tab');
-    tabs.forEach(tab => tab.classList.remove('active'));
-    
-    // Trouver le bouton cliqué
-    event.currentTarget.classList.add('active');
-
-    // Mettre à jour les panneaux (Afficher / Cacher)
-    const panels = document.querySelectorAll('.pricing-panel');
-    panels.forEach(panel => {
-        panel.classList.remove('active');
-    });
-
-    // Afficher le bon panneau
-    const activePanel = document.getElementById(`panel-${type}`);
-    if(activePanel) {
-        activePanel.classList.add('active');
-    }
-}

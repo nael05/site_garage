@@ -1,412 +1,455 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="pictures/logo_clean_wash__and_co.webp" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="description" content="Clean Wash & Co - L'excellence du nettoyage automobile en Île-de-France. Services professionnels pour véhicules, et nettoyage à domicile de canapés, matelas et tapis.">
-    <meta name="keywords" content="nettoyage automobile, lavage auto, detailing auto, nettoyage canapé, nettoyage matelas, Île-de-France, Jouy-le-Moutier">
-    <meta name="author" content="Clean Wash & Co">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Clean Wash & Co - Nettoyage Automobile Premium">
-    <meta property="og:description" content="L'excellence en nettoyage automobile, intérieur et extérieur. Service à domicile pour canapés, matelas et tapis en Île-de-France.">
-
-    <title>Clean Wash & Co - Nettoyage Automobile Premium en Île-de-France</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HDD Auto-Services à Herblay - Garage automobile noté 4,7/5 sur 356 avis. Entretien, réparation, embrayage, vidange, contrôle technique. Accueil chaleureux et tarifs honnêtes.">
+    <meta name="keywords" content="garage automobile Herblay, réparation voiture Herblay, entretien auto 95, embrayage, vidange, contrôle technique Val d'Oise, HDD Auto-Services">
+    <meta name="author" content="HDD Auto-Services">
+    <title>HDD Auto-Services | Garage Automobile à Herblay (95)</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles ajoutés pour l'intégration des photos */
+        .photo-img { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block; }
+        .gallery-photo { overflow: hidden; padding: 0 !important; }
+        .service-img { width: 60px; height: 60px; object-fit: cover; border-radius: 50%; margin-bottom: 15px; display: block; }
+        .about-main-img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+        .photo-emoji-bg { padding: 0 !important; overflow: hidden; }
+        .logo-img { width: 30px; height: 30px; object-fit: cover; border-radius: 4px; }
+    </style>
 </head>
-
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="navbar-brand">
-                <img src="pictures/logo_clean_wash__and_co_cercle.webp" alt="Logo Clean Wash & Co" class="logo-image">
+
+<button id="backToTop" title="Retour en haut">↑</button>
+
+<header id="mainHeader">
+    <div class="container">
+        <nav>
+            <a href="#accueil" class="logo">
+                <div class="logo-icon"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=400&q=80" alt="Logo" class="logo-img"></div>
                 <div class="logo-text">
-                    <span class="logo-clean">CLEAN</span>
-                    <span class="logo-wash">WASH</span>
-                    <span class="logo-co">& CO</span>
+                    <span>HDD Auto-Services</span>
+                    <span>Garage • Herblay (95)</span>
                 </div>
             </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#a-propos">Le Garage</a></li>
+                <li><a href="#galerie">Photos</a></li>
+                <li><a href="#prestations">Prestations</a></li>
+                <li><a href="#avis">Avis</a></li>
+                <li><a href="#contact" class="nav-cta">📅 Prendre RDV</a></li>
+            </ul>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </nav>
+    </div>
+</header>
 
-            <div class="nav-links" id="navLinks">
-                <a href="index.html" class="nav-link active">Accueil</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="processus.html" class="nav-link">Notre Processus</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-            </div>
-
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <section class="hero" id="accueil">
-        <div class="hero-background">
-            <div class="grid-overlay"></div>
-            <div class="gradient-sphere sphere-1"></div>
-            <div class="gradient-sphere sphere-2"></div>
-            <div class="gradient-sphere sphere-3"></div>
-        </div>
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line">L'EXCELLENCE</span>
-                    <span class="title-line highlight">EN NETTOYAGE</span>
-                    <span class="title-line">AUTOMOBILE EN ILE DE FRANCE</span>
-                </h1>
-                <p class="hero-subtitle">Redonnez vie à votre véhicule dans notre centre à Jouy-le-Moutier (95) et à votre intérieur partout en Île-de-France grâce à nos services premium.</p>                <div class="hero-buttons">
-                    <a href="https://wa.me/33650782684" class="btn btn-primary">
-                        <span>Contactez-nous</span>
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                    <a href="services.html" class="btn btn-secondary">Découvrir nos services</a>
+<section id="accueil" class="hero">
+    <div class="container">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">⭐ 4,7/5 · 356 avis Google</div>
+                <h1>Votre garage de <span>confiance</span> à Herblay</h1>
+                <p class="hero-desc">HDD Auto-Services, c'est une équipe passionnée autour de Rachid, reconnue pour son honnêteté, la qualité de son travail et son accueil irréprochable.</p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn-primary">📅 Prendre rendez-vous</a>
+                    <a href="tel:+33123456789" class="btn-secondary">📞 Appeler maintenant</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat"><span class="stat-number">4,7⭐</span><span class="stat-label">Note Google</span></div>
+                    <div class="hero-stat"><span class="stat-number">356</span><span class="stat-label">Avis clients</span></div>
+                    <div class="hero-stat"><span class="stat-number">+15 ans</span><span class="stat-label">D'expérience</span></div>
                 </div>
             </div>
-            <div class="hero-stats">
-                <div class="stat-card">
-                    <div class="stat-number" data-target="967">0</div>
-                    <div class="stat-label">Clients satisfaits</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="96">0</div>
-                    <div class="stat-label">% de satisfaction</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" data-target="1087">0</div>
-                    <div class="stat-label">Véhicules nettoyés</div>
-                </div>
-            </div>
-
-            <div class="reviews-ticker">
-                <div class="ticker-wrapper">
-                    <div class="ticker-group">
-                        <div class="review-card">
-                            <div class="review-header"><strong>Camille</strong> <span class="stars">★★★★★</span></div>
-                            <p>"Superbe expérience ! Rapides et professionnels, ma voiture était nickel. Meilleur rapport qualité prix !"</p>
-                            <span class="review-date">Décembre 2025</span>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-header"><strong>Benjamin</strong> <span class="stars">★★★★★</span></div>
-                            <p>"Prestation de qualité pour un SUV rendu nickel intérieur/extérieur. Je recommande."</p>
-                            <span class="review-date">Décembre 2025</span>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-header"><strong>Laura</strong> <span class="stars">★★★★★</span></div>
-                            <p>"Prise de rdv rapide, tarifs raisonnables. Ma voiture est comme neuve, très bon boulot !"</p>
-                            <span class="review-date">Avril 2025</span>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-header"><strong>Thomas</strong> <span class="stars">★★★★★</span></div>
-                            <p>"Service au top ! Équipe très sérieuse et agréable. Voiture comme neuve."</p>
-                            <span class="review-date">Mai 2025</span>
-                        </div>
-                        <div class="review-card">
-                            <div class="review-header"><strong>Lohan</strong> <span class="stars">★★★★★</span></div>
-                            <p>"Équipe au top ! J’ai jamais vu ma voiture aussi propre. Confiez votre voiture les yeux fermés."</p>
-                            <span class="review-date">Avril 2025</span>
-                        </div>
+            <div class="hero-visual">
+                <div class="photo-grid">
+                    <div class="photo-card tall">
+                        <div class="photo-emoji-bg"><img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=400&q=80" alt="Atelier principal" class="photo-img"></div>
+                        <div class="photo-overlay"><span>Atelier principal</span></div>
+                        <div class="rating-pill">⭐ 4,7</div>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-emoji-bg"><img src="https://images.unsplash.com/photo-1562426509-5044a121aa49?auto=format&fit=crop&w=400&q=80" alt="Accueil client" class="photo-img"></div>
+                        <div class="photo-overlay"><span>Accueil client</span></div>
+                    </div>
+                    <div class="photo-card">
+                        <div class="photo-emoji-bg"><img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&w=400&q=80" alt="Pneus et freins" class="photo-img"></div>
+                        <div class="photo-overlay"><span>Pneus & freins</span></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="pricing" id="tarifs" style="padding: 4rem 0; position: relative; z-index: 10;">
-        <div class="container">
-            <div class="section-header" style="margin-bottom: 3rem;">
-                <span class="section-tag" data-aos="fade-down">TRANSPARENCE</span>
-                <h2 class="section-title" data-aos="fade-up" style="text-align: center;">Nos Tarifs</h2>
-                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" style="text-align: center; color: var(--text-gray);">Un aperçu de nos formules. Consultez la page services pour voir tous les détails et suppléments.</p>
-            </div>
-
-            <div class="pricing-toggle-wrapper" data-aos="fade-up" data-aos-delay="150">
-                <div class="pricing-toggle">
-                    <button class="p-tab active" onclick="togglePricing('auto')">
-                        <i class="fas fa-car" style="margin-right: 8px;"></i> Automobile
-                    </button>
-                    <button class="p-tab" onclick="togglePricing('domicile')">
-                        <i class="fas fa-couch" style="margin-right: 8px;"></i> Domicile
-                    </button>
-                </div>
-            </div>
-
-            <div class="pricing-panels-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="pricing-panel active" id="panel-auto">
-                    <div class="pricing-card-premium">
-                        <div class="p-card-header">
-                            <h3>Service en Centre</h3>
-                            <p>Jouy-le-Moutier (95)</p>
-                        </div>
-                        <ul class="pricing-list-premium">
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Nettoyage Express</span>
-                                </div>
-                                <span class="p-item-price">Dès 5€</span>
-                            </li>
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Nettoyage Extérieur</span>
-                                </div>
-                                <span class="p-item-price">20€</span>
-                            </li>
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Intérieur Simple</span>
-                                </div>
-                                <span class="p-item-price">30€</span>
-                            </li>
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Intérieur Complet <span class="badge">Best Seller</span></span>
-                                </div>
-                                <span class="p-item-price">40€</span>
-                            </li>
-                            <li class="p-highlight">
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Intérieur + Extérieur</span>
-                                </div>
-                                <span class="p-item-price">60€</span>
-                            </li>
-                        </ul>
-                        <a href="services.html#auto" class="btn btn-primary btn-full p-btn">Voir les prestations Auto</a>
-                    </div>
-                </div>
-
-                <div class="pricing-panel" id="panel-domicile">
-                    <div class="pricing-card-premium">
-                        <div class="p-card-header">
-                            <h3>Service à Domicile</h3>
-                            <p>Partout en Île-de-France</p>
-                        </div>
-                        <ul class="pricing-list-premium">
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Canapé (1 place)</span>
-                                </div>
-                                <span class="p-item-price">20€</span>
-                            </li>
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Canapé (3 places)</span>
-                                </div>
-                                <span class="p-item-price">50€</span>
-                            </li>
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Tapis</span>
-                                </div>
-                                <span class="p-item-price">Dès 30€</span>
-                            </li>
-                            <li>
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Matelas (140x190)</span>
-                                </div>
-                                <span class="p-item-price">40€</span>
-                            </li>
-                            <li class="p-highlight">
-                                <div class="p-item-info">
-                                    <span class="p-item-name">Matelas (160x200) <span class="badge">Best Seller</span></span>
-                                </div>
-                                <span class="p-item-price">50€</span>
-                            </li>
-                        </ul>
-                        <a href="services.html#domicile" class="btn btn-primary btn-full p-btn">Voir les prestations Domicile</a>
-                    </div>
-                </div>
-            </div>
-            
+<div class="trust-bar">
+    <div class="container">
+        <div class="trust-inner">
+            <div class="trust-item"><span>✅</span><span>Devis gratuit & transparent</span></div>
+            <div class="trust-item"><span>🛡️</span><span>Garantie pièces & main-d'œuvre</span></div>
+            <div class="trust-item"><span>⚡</span><span>Sans rendez-vous accepté</span></div>
+            <div class="trust-item"><span>💰</span><span>Tarifs honnêtes & compétitifs</span></div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <section class="contact" id="contact" style="padding: 4rem 0 3rem 0; border-top: 1px solid var(--border-color);">
-        <div class="container">
-            <div class="section-header" style="margin-bottom: 3rem;">
-                <span class="section-tag" data-aos="fade-down">CONTACT</span>
-                <h2 class="section-title" style="font-size: clamp(1.8rem, 4vw, 2.5rem);">Prêt à prendre rendez-vous ?</h2>
-            </div>
-
-            <div class="contact-block" style="margin-bottom: 3rem;">
-                <h3 style="font-family: var(--font-display); font-size: 1.1rem; color: var(--text-gray); margin-bottom: 1.5rem; text-align: center; text-transform: uppercase; letter-spacing: 2px;" data-aos="fade-up">Nous contacter</h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 1050px; margin: 0 auto;">
-                    
-                    <a href="tel:0650782684" class="info-item clickable-card" data-aos="fade-up" style="flex-direction: row; text-align: left; padding: 1rem; align-items: center;">
-                        <div class="info-icon" style="margin-bottom: 0; width: 45px; height: 45px;">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                        </div>
-                        <div class="info-text" style="display: flex; flex-direction: column;">
-                            <div class="info-label" style="margin-bottom: 2px;">Téléphone</div>
-                            <div class="info-value" style="font-size: 1rem; margin-bottom: 0;">06 50 78 26 84</div>
-                        </div>
-                    </a>
-
-                    <a href="https://wa.me/33650782684?text=Bonjour%20Clean%20Wash%20%26%20Co%20!%20Je%20souhaiterais%20avoir%20des%20informations%20ou%20prendre%20rendez-vous." target="_blank" class="info-item clickable-card" data-aos="fade-up" data-aos-delay="50" style="flex-direction: row; text-align: left; padding: 1rem; align-items: center;">
-                        <div class="info-icon" style="margin-bottom: 0; width: 45px; height: 45px;">
-                            <svg width="24" height="24" viewBox="0 0 448 512" fill="#25D366">
-                                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.6-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.8-5.7 5.7-9.4 1.9-3.7 1-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.5 9.2 31.5 11.8 13.3 4.2 25.5 3.6 35.2 2.2 10.8-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-                            </svg>
-                        </div>
-                        <div class="info-text" style="display: flex; flex-direction: column;">
-                            <div class="info-label" style="margin-bottom: 2px;">WhatsApp</div>
-                            <span class="info-action" style="margin-top: 0; font-size: 0.85rem;">Message direct →</span>
-                        </div>
-                    </a>
-
-                    <a href="https://www.instagram.com/cleanwashandcoo?igsh=MXdhMnBuYno1anE5aw%3D%3D" target="_blank" class="info-item clickable-card" data-aos="fade-up" data-aos-delay="100" style="flex-direction: row; text-align: left; padding: 1rem; align-items: center;">
-                        <div class="info-icon" style="color: #E1306C; margin-bottom: 0; width: 45px; height: 45px;">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </div>
-                        <div class="info-text" style="display: flex; flex-direction: column;">
-                            <div class="info-label" style="margin-bottom: 2px;">Instagram</div>
-                            <span class="info-action" style="margin-top: 0; font-size: 0.85rem;">Nos travaux →</span>
-                        </div>
-                    </a>
-
-                    <a href="https://www.tiktok.com/@cleanwashandco?is_from_webapp=1&sender_device=pc" target="_blank" class="info-item clickable-card" data-aos="fade-up" data-aos-delay="150" style="flex-direction: row; text-align: left; padding: 1rem; align-items: center;">
-                        <div class="info-icon" style="margin-bottom: 0; width: 45px; height: 45px;">
-                            <svg width="22" height="22" viewBox="0 0 448 512" style="filter: drop-shadow(2px 0px 0px #fd1d1d) drop-shadow(-2px 0px 0px #00f0ff);">
-                                <path fill="white" d="M448 209.91a210.06 210.06 0 0 1-122.77-39.25V349.38A162.55 162.55 0 1 1 185 188.31V278.2a74.62 74.62 0 1 0 52.23 71.18V0l88 0a121.18 121.18 0 0 0 1.86 22.17h0A122.18 122.18 0 0 0 381 102.39a121.43 121.43 0 0 0 67 20.14Z"/>
-                            </svg>
-                        </div>
-                        <div class="info-text" style="display: flex; flex-direction: column;">
-                            <div class="info-label" style="margin-bottom: 2px;">TikTok</div>
-                            <span class="info-action" style="margin-top: 0; font-size: 0.85rem;">Nos vidéos →</span>
-                        </div>
-                    </a>
-
-                    <a href="https://snapchat.com/t/ueWa0nrx" target="_blank" class="info-item clickable-card" data-aos="fade-up" data-aos-delay="200" style="flex-direction: row; text-align: left; padding: 1rem; align-items: center;">
-                        <div class="info-icon" style="color: #FFFC00; margin-bottom: 0; width: 45px; height: 45px;">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                                <path d="M15.943 11.526c-.111-.303-.323-.465-.564-.599a1 1 0 0 0-.123-.064l-.219-.111c-.752-.399-1.339-.902-1.746-1.498a3.4 3.4 0 0 1-.3-.531c-.034-.1-.032-.156-.008-.207a.3.3 0 0 1 .097-.1c.129-.086.262-.173.352-.231.162-.104.289-.187.371-.245.309-.216.525-.446.66-.702a1.4 1.4 0 0 0 .069-1.16c-.205-.538-.713-.872-1.329-.872a1.8 1.8 0 0 0-.487.065c.006-.368-.002-.757-.035-1.139-.116-1.344-.587-2.048-1.077-2.61a4.3 4.3 0 0 0-1.095-.881C9.764.216 8.92 0 7.999 0s-1.76.216-2.505.641c-.412.232-.782.53-1.097.883-.49.562-.96 1.267-1.077 2.61-.033.382-.04.772-.036 1.138a1.8 1.8 0 0 0-.487-.065c-.615 0-1.124.335-1.328.873a1.4 1.4 0 0 0 .067 1.161c.136.256.352.486.66.701.082.058.21.14.371.246l.339.221a.4.4 0 0 1 .109.11c.026.053.027.11-.012.217a3.4 3.4 0 0 1-.295.52c-.398.583-.968 1.077-1.696 1.472-.385.204-.786.34-.955.8-.128.348-.044.743.28 1.075q.18.189.409.31a4.4 4.4 0 0 0 1 .4.7.7 0 0 1 .202.09c.118.104.102.26.259.488q.12.178.296.3c.33.229.701.243 1.095.258.355.014.758.03 1.217.18.19.064.389.186.618.328.55.338 1.305.802 2.566.802 1.262 0 2.02-.466 2.576-.806.227-.14.424-.26.609-.321.46-.152.863-.168 1.218-.181.393-.015.764-.03 1.095-.258a1.14 1.14 0 0 0 .336-.368c.114-.192.11-.327.217-.42a.6.6 0 0 1 .19-.087 4.5 4.5 0 0 0 1.014-.404c.16-.087.306-.2.429-.336l.004-.005c.304-.325.38-.709.256-1.047m-1.121.602c-.684.378-1.139.337-1.493.565-.3.193-.122.61-.34.76-.269.186-1.061-.012-2.085.326-.845.279-1.384 1.082-2.903 1.082s-2.045-.801-2.904-1.084c-1.022-.338-1.816-.14-2.084-.325-.218-.15-.041-.568-.341-.761-.354-.228-.809-.187-1.492-.563-.436-.24-.189-.39-.044-.46 2.478-1.199 2.873-3.05 2.89-3.188.022-.166.045-.297-.138-.466-.177-.164-.962-.65-1.18-.802-.36-.252-.52-.503-.402-.812.082-.214.281-.295.49-.295a1 1 0 0 1 .197.022c.396.086.78.285 1.002.338q.04.01.082.011c.118 0 .16-.06.152-.195-.026-.433-.087-1.277-.019-2.066.094-1.084.444-1.622.859-2.097.2-.229 1.137-1.22 2.93-1.22 1.792 0 2.732.987 2.931 1.215.416.475.766 1.013.859 2.098.068.788.009 1.632-.019 2.065-.01.142.034.195.152.195a.4.4 0 0 0 .082-.01c.222-.054.607-.253 1.002-.338a1 1 0 0 1 .197-.023c.21 0 .409.082.49.295.117.309-.04.56-.401.812-.218.152-1.003.638-1.18.802-.184.169-.16.3-.139.466.018.14.413 1.991 2.89 3.189.147.073.394.222-.041.464"/>
-                            </svg>
-                        </div>
-                        <div class="info-text" style="display: flex; flex-direction: column;">
-                            <div class="info-label" style="margin-bottom: 2px;">Snapchat</div>
-                            <span class="info-action" style="margin-top: 0; font-size: 0.85rem;">Nos stories →</span>
-                        </div>
-                    </a>
-
+<section id="a-propos" class="about-bg">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-visual">
+                <div class="about-main-card">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=400&q=80" alt="Rachid et son équipe" class="about-main-img">
+                    <h3>Rachid & son équipe</h3>
+                    <p>Un garage familial et passionné, à votre service depuis plus de 15 ans dans le Val d'Oise.</p>
                 </div>
-            </div>
-
-            <hr style="border: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--border-color), transparent); margin: 0 auto 3rem auto; max-width: 800px; opacity: 0.5;">
-
-            <div class="location-block">
-                <h3 style="font-family: var(--font-display); font-size: 1.1rem; color: var(--text-gray); margin-bottom: 1.5rem; text-align: center; text-transform: uppercase; letter-spacing: 2px;" data-aos="fade-up" data-aos-delay="200">Zones d'intervention</h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
-                    
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="250" style="flex-direction: row; text-align: left; padding: 1.2rem; align-items: center; justify-content: center; background: rgba(0, 240, 255, 0.02);">
-                        <div class="info-icon" style="color: var(--primary); margin-bottom: 0; width: 45px; height: 45px; background: rgba(0, 240, 255, 0.05);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"></path>
-                            </svg>
-                        </div>
-                        <div class="info-text">
-                            <div class="info-label" style="margin-bottom: 2px;">Service à Domicile</div>
-                            <div style="font-size: 0.95rem; color: var(--text-light); font-weight: 600;">Canapé, matelas, tapis</div>
-                        </div>
+                <div class="about-float f1">
+                    <span class="f-icon">⭐</span>
+                    <div>
+                        <div style="font-size:1rem;font-weight:800;">4,7/5</div>
+                        <div style="font-size:0.7rem;color:var(--text-light);">356 avis Google</div>
                     </div>
-
-                    <div class="info-item" data-aos="fade-up" data-aos-delay="300" style="flex-direction: row; text-align: left; padding: 1.2rem; align-items: center; justify-content: center; background: rgba(0, 240, 255, 0.02);">
-                        <div class="info-icon" style="color: var(--primary); margin-bottom: 0; width: 45px; height: 45px; background: rgba(0, 240, 255, 0.05);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z"></path>
-                            </svg>
-                        </div>
-                        <div class="info-text">
-                            <div class="info-label" style="margin-bottom: 2px;">Service Automobile</div>
-                            <div style="font-size: 0.95rem; color: var(--text-light); font-weight: 600;">📍 Jouy-le-Moutier (95)</div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-clean">CLEAN</span>
-                        <span class="logo-wash">WASH</span>
-                        <span class="logo-co">& CO</span>
-                    </div>
-                    <p class="footer-tagline">L'excellence en nettoyage automobile, canapé, matelas et tapis</p>
-                </div>
-
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Services</h4>
-                        <ul>
-                            <li><a href="services.html">Nettoyage Auto Intérieur</a></li>
-                            <li><a href="services.html">Nettoyage Auto Extérieur</a></li>
-                            <li><a href="services.html">Nettoyage de canapé</a></li>
-                            <li><a href="services.html">Nettoyage de matelas</a></li>
-                            <li><a href="services.html">Nettoyage de tapis</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Entreprise</h4>
-                        <ul>
-                            <li><a href="processus.html">Notre Processus</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="mentions-legales.html">Mentions Légales</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-column">
-                        <h4>Horaires</h4>
-                        <ul>
-                            <li>Nettoyage auto : Mer. à Dim. de 9h - 20h</li>
-                            <li>À domicile : Lundi et mardi</li>
-                        </ul>
+                <div class="about-float f2">
+                    <span class="f-icon">🏅</span>
+                    <div>
+                        <div style="font-size:0.88rem;font-weight:800;">Toutes marques</div>
+                        <div style="font-size:0.7rem;color:var(--text-light);">Peugeot, Renault, Mercedes…</div>
                     </div>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Clean Wash & Co. Tous droits réservés.</p>
-                <div class="footer-socials">
-                    <a href="https://www.instagram.com/cleanwashandcoo" target="_blank" title="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
+            <div class="about-text">
+                <div class="section-tag">À propos</div>
+                <h2 class="section-title">Un garage humain, honnête et efficace</h2>
+                <p>Fondé il y a plus de 15 ans à Herblay, HDD Auto-Services s'est imposé comme une référence locale grâce à une philosophie simple : traiter chaque véhicule comme si c'était le nôtre.</p>
+                <p>Notre priorité ? La transparence. Aucun travail n'est entrepris sans votre accord. Nous vous montrons l'état réel de votre véhicule — Rachid filme même les réparations effectuées — et vous proposons uniquement les interventions nécessaires, au juste prix.</p>
+                <p>Que vous ayez une Peugeot 206, une Opel Corsa, une Mercedes récente ou n'importe quelle autre marque, notre équipe saura diagnostiquer et résoudre votre problème rapidement.</p>
+                <div class="about-checks">
+                    <div class="check-item"><div class="check-dot">✓</div>Toutes marques</div>
+                    <div class="check-item"><div class="check-dot">✓</div>Devis respecté</div>
+                    <div class="check-item"><div class="check-dot">✓</div>Vidéo des réparations</div>
+                    <div class="check-item"><div class="check-dot">✓</div>Sans surprise</div>
+                    <div class="check-item"><div class="check-dot">✓</div>Accueil sans RDV</div>
+                    <div class="check-item"><div class="check-dot">✓</div>Pièces de qualité</div>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <button id="scrollTop" aria-label="Retour en haut">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 15l-6-6-6 6" />
-        </svg>
-    </button>
+<section id="galerie" class="gallery-bg">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">📸 Photos</div>
+            <h2 class="section-title">Le garage en images</h2>
+            <p class="section-sub">Un espace propre, organisé et équipé des derniers outils de diagnostic.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item wide tall">
+                <div class="gallery-photo g1" style="height:100%;">
+                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=400&q=80" alt="Atelier de mécanique" class="photo-img">
+                </div>
+                <div class="gallery-caption">Atelier de mécanique</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-photo g2">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=400&q=80" alt="Accueil client" class="photo-img">
+                </div>
+                <div class="gallery-caption">Accueil client</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-photo g3">
+                    <img src="https://images.unsplash.com/photo-1632733711679-529326f6db12?auto=format&fit=crop&w=400&q=80" alt="Diagnostic électronique" class="photo-img">
+                </div>
+                <div class="gallery-caption">Diagnostic électronique</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-photo g4">
+                    <img src="https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=400&q=80" alt="Montage pneus" class="photo-img">
+                </div>
+                <div class="gallery-caption">Montage pneus</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-photo g5">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=400&q=80" alt="Révision mécanique" class="photo-img">
+                </div>
+                <div class="gallery-caption">Révision embrayage</div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-photo g6">
+                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=400&q=80" alt="Toutes marques" class="photo-img">
+                </div>
+                <div class="gallery-caption">Toutes marques</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <script src="script.js"></script>
+<section id="prestations" class="services-bg">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-tag">💰 Tarifs</div>
+            <h2 class="section-title">Nos prestations & tarifs</h2>
+            <p class="section-sub">Des prix clairs, annoncés à l'avance et toujours respectés. Aucune mauvaise surprise.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=150&q=80" alt="Vidange" class="service-img">
+                <h3>Vidange & Révision</h3>
+                <p class="service-desc">Vidange huile moteur, remplacement filtre, vérification 50 points. Toutes marques.</p>
+                <div class="price">59€ <span class="price-sub">/ à partir de</span></div>
+            </div>
+            <div class="service-card featured">
+                <div class="service-tag">⭐ Populaire</div>
+                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=150&q=80" alt="Embrayage" class="service-img">
+                <h3>Remplacement Embrayage</h3>
+                <p class="service-desc">Diagnostic, démontage, remplacement du kit embrayage complet. Prix honnête garanti.</p>
+                <div class="price">350€ <span class="price-sub">/ à partir de</span></div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=150&q=80" alt="Contrôle Technique" class="service-img">
+                <h3>Contrôle Technique</h3>
+                <p class="service-desc">Pré-contrôle offert pour éviter la contre-visite. Accompagnement au centre agréé.</p>
+                <div class="price">79€ <span class="price-sub">/ forfait</span></div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=150&q=80" alt="Pneus" class="service-img">
+                <h3>Pneus & Équilibrage</h3>
+                <p class="service-desc">Montage, équilibrage, parallélisme. Pneus toutes saisons disponibles en stock.</p>
+                <div class="price">45€ <span class="price-sub">/ par pneu</span></div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=150&q=80" alt="Freins" class="service-img">
+                <h3>Freinage Complet</h3>
+                <p class="service-desc">Remplacement plaquettes, disques, flexibles. Votre sécurité est notre priorité.</p>
+                <div class="price">120€ <span class="price-sub">/ à partir de</span></div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=150&q=80" alt="Diagnostic" class="service-img">
+                <h3>Diagnostic Électronique</h3>
+                <p class="service-desc">Lecture de codes défaut, diagnostic moteur, capteurs et systèmes électroniques.</p>
+                <div class="price">40€ <span class="price-sub">/ l'intervention</span></div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&w=150&q=80" alt="Climatisation" class="service-img">
+                <h3>Climatisation</h3>
+                <p class="service-desc">Recharge gaz, nettoyage du circuit, désinfection de l'habitacle incluse.</p>
+                <div class="price">69€ <span class="price-sub">/ l'intervention</span></div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?auto=format&fit=crop&w=150&q=80" alt="Courroie" class="service-img">
+                <h3>Distribution & Courroie</h3>
+                <p class="service-desc">Remplacement courroie de distribution et pompe à eau. Pièces qualité d'origine.</p>
+                <div class="price">299€ <span class="price-sub">/ à partir de</span></div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=150&q=80" alt="Batterie" class="service-img">
+                <h3>Batterie & Démarrage</h3>
+                <p class="service-desc">Diagnostic batterie, remplacement, démarreur et alternateur. Intervention rapide.</p>
+                <div class="price">89€ <span class="price-sub">/ à partir de</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="avis" class="reviews-bg">
+    <div class="container">
+        <div class="section-header" style="text-align:center;">
+            <div class="section-tag">💬 Avis Google</div>
+            <h2 class="section-title">Ce que disent nos clients</h2>
+            <p class="section-sub" style="margin:0 auto;">Des vrais avis, des vraies personnes. La confiance se mérite chaque jour.</p>
+        </div>
+
+        <div class="rating-overview">
+            <div class="rating-big">
+                <div class="rating-number">4,7</div>
+                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                <div class="rating-count">356 avis Google</div>
+            </div>
+            <div class="rating-bars">
+                <div class="bar-row"><span class="bar-label">5 ⭐</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div><span class="bar-count">292</span></div>
+                <div class="bar-row"><span class="bar-label">4 ⭐</span><div class="bar-track"><div class="bar-fill" style="width:11%"></div></div><span class="bar-count">39</span></div>
+                <div class="bar-row"><span class="bar-label">3 ⭐</span><div class="bar-track"><div class="bar-fill" style="width:4%"></div></div><span class="bar-count">14</span></div>
+                <div class="bar-row"><span class="bar-label">2 ⭐</span><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span class="bar-count">7</span></div>
+                <div class="bar-row"><span class="bar-label">1 ⭐</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span class="bar-count">4</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews-marquee-wrap" style="margin-bottom:1.2rem;">
+        <div class="reviews-track" id="track1"></div>
+    </div>
+    <div class="reviews-marquee-wrap">
+        <div class="reviews-track reverse" id="track2"></div>
+    </div>
+</section>
+
+<section id="horaires" class="hours-services-bg">
+    <div class="container">
+        <div class="hours-services-grid">
+            <div>
+                <div class="section-tag">⏰ Horaires</div>
+                <h2 class="section-title">Nos horaires d'ouverture</h2>
+                <p class="section-sub" style="margin-bottom:2rem;">Ouverts du lundi au vendredi. Passage sans rendez-vous bienvenu selon disponibilité.</p>
+                <div class="hours-card">
+                    <div class="card-header">⏰ Horaires de la semaine</div>
+                    <div id="hoursTable">
+                        <div class="hours-row" data-day="1"><span class="hours-day">Lundi</span><span class="hours-time">08:30 – 18:00</span></div>
+                        <div class="hours-row" data-day="2"><span class="hours-day">Mardi</span><span class="hours-time">08:30 – 18:00</span></div>
+                        <div class="hours-row" data-day="3"><span class="hours-day">Mercredi</span><span class="hours-time">08:30 – 18:00</span></div>
+                        <div class="hours-row" data-day="4"><span class="hours-day">Jeudi</span><span class="hours-time">08:30 – 18:00</span></div>
+                        <div class="hours-row" data-day="5"><span class="hours-day">Vendredi</span><span class="hours-time">08:30 – 17:30</span></div>
+                        <div class="hours-row" data-day="6"><span class="hours-day">Samedi</span><span class="hours-time">09:00 – 12:30</span></div>
+                        <div class="hours-row" data-day="0"><span class="hours-day">Dimanche</span><span class="hours-time closed">Fermé</span></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="section-tag">📍 Localisation</div>
+                <h2 class="section-title">Où nous trouver</h2>
+                <p class="section-sub" style="margin-bottom:2rem;">Facilement accessible depuis Herblay et les communes voisines du Val d'Oise.</p>
+                <div class="css-map">
+                    <div class="map-road-h2"></div>
+                    <div class="map-road-h"></div>
+                    <div class="map-road-v"></div>
+                    <div class="map-building mb1"></div>
+                    <div class="map-building mb2"></div>
+                    <div class="map-building mb3"></div>
+                    <div class="map-building mb4"></div>
+                    <div class="map-park-area"></div>
+                    <div class="map-pin">📍</div>
+                    <div class="map-label-box">🔧 HDD Auto-Services</div>
+                    <div class="map-gmaps-btn">🗺️ Voir sur Google Maps</div>
+                </div>
+                <div style="margin-top:1rem;background:var(--primary-light);border-radius:12px;padding:1rem 1.2rem;border:1px solid #bfdbfe;">
+                    <p style="font-size:0.88rem;font-weight:600;color:var(--primary);">📍 Herblay-sur-Seine, Val d'Oise (95)</p>
+                    <p style="font-size:0.82rem;color:var(--text-light);margin-top:4px;">Proche de Cormeilles-en-Parisis, Saint-Leu-la-Forêt, Taverny</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-bg">
+    <div class="container">
+        <div class="section-header" style="text-align:center;">
+            <div class="section-tag">📅 Contact</div>
+            <h2 class="section-title">Prenez rendez-vous</h2>
+            <p class="section-sub" style="margin:0 auto;">Contactez-nous ou envoyez votre demande. Nous vous répondons rapidement.</p>
+        </div>
+        <div class="contact-grid">
+            <div>
+                <div class="contact-info-cards">
+                    <div class="cinfo-card">
+                        <div class="cinfo-icon">📞</div>
+                        <div><div class="cinfo-label">Téléphone</div><a href="tel:+33123456789" class="cinfo-val phone-link">01 23 45 67 89</a></div>
+                    </div>
+                    <div class="cinfo-card">
+                        <div class="cinfo-icon">📍</div>
+                        <div><div class="cinfo-label">Adresse</div><div class="cinfo-val">Herblay-sur-Seine, 95220</div></div>
+                    </div>
+                    <div class="cinfo-card">
+                        <div class="cinfo-icon">📧</div>
+                        <div><div class="cinfo-label">Email</div><div class="cinfo-val">contact@hdd-autoservices.fr</div></div>
+                    </div>
+                    <div class="cinfo-card">
+                        <div class="cinfo-icon">⚡</div>
+                        <div><div class="cinfo-label">Sans rendez-vous</div><div class="cinfo-val">Accepté selon disponibilité</div></div>
+                    </div>
+                </div>
+                <div style="background:linear-gradient(135deg,#1e3a5f,#1a56db);border-radius:var(--radius);padding:1.5rem;color:white;">
+                    <div style="font-size:1.5rem;margin-bottom:8px;">💡 Le saviez-vous ?</div>
+                    <p style="font-size:0.88rem;opacity:0.9;line-height:1.7;">Rachid vous montre une vidéo des réparations effectuées sur votre véhicule. Une transparence totale appréciée par nos clients !</p>
+                </div>
+            </div>
+            <div class="contact-form-card">
+                <div id="formSuccess" class="form-success">✅ Votre demande a été envoyée ! Nous vous contactons sous 24h.</div>
+                <div class="form-title">Envoyer une demande</div>
+                <p class="form-subtitle">Décrivez votre besoin et nous vous recontactons rapidement.</p>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Prénom</label>
+                            <input type="text" class="form-input" placeholder="Jean" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nom</label>
+                            <input type="text" class="form-input" placeholder="Dupont" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Téléphone</label>
+                        <input type="tel" class="form-input" placeholder="06 12 34 56 78" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Prestation souhaitée</label>
+                        <select class="form-input" required>
+                            <option value="" disabled selected>Choisir une prestation...</option>
+                            <option>Vidange & Révision</option>
+                            <option>Embrayage</option>
+                            <option>Contrôle Technique</option>
+                            <option>Pneus & Équilibrage</option>
+                            <option>Freinage</option>
+                            <option>Diagnostic Électronique</option>
+                            <option>Climatisation</option>
+                            <option>Distribution</option>
+                            <option>Autre</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Immatriculation & Modèle</label>
+                        <input type="text" class="form-input" placeholder="Ex: AB-123-CD · Renault Clio">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-input" placeholder="Décrivez votre problème ou votre besoin..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Envoyer ma demande 🚀</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo" style="margin-bottom:1rem;">
+                    <div class="logo-icon"><img src="https://images.unsplash.com/photo-1599256621730-535171e2873c?auto=format&fit=crop&w=100&q=80" alt="Logo" class="logo-img"></div>
+                    <div class="logo-text">
+                        <span>HDD Auto-Services</span>
+                        <span>Garage • Herblay (95)</span>
+                    </div>
+                </div>
+                <p class="footer-desc">Votre garage de confiance dans le Val d'Oise. Honnêteté, professionnalisme et tarifs compétitifs depuis plus de 15 ans.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#a-propos">Le Garage</a></li>
+                    <li><a href="#prestations">Prestations</a></li>
+                    <li><a href="#avis">Avis Clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+33123456789">📞 01 23 45 67 89</a></li>
+                    <li><a href="#">📍 Herblay-sur-Seine 95220</a></li>
+                    <li><a href="#">📧 contact@hdd-autoservices.fr</a></li>
+                    <li><a href="#horaires">⏰ Lun-Ven : 08:30-18:00</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2026 HDD Auto-Services – Herblay-sur-Seine (95) · Tous droits réservés · Garage automobile Val d'Oise
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
